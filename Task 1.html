@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navbar Task</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding: 15px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav.scrolled {
+            background: black;
+        }
+
+        /* Links */
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        ul li {
+            margin: 0 10px;
+        }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        ul li a:hover {
+            color: cyan;
+        }
+
+        /* Sections */
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+        }
+
+        #home {
+            background: blue;
+        }
+
+        #about {
+            background: purple;
+        }
+
+        #services {
+            background: green;
+        }
+
+        #contact {
+            background: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav id="nav">
+        <h2 style="color:white;">Logo</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">Home</section>
+    <section id="about">About</section>
+    <section id="services">Services</section>
+    <section id="contact">Contact</section>
+
+    <script>
+        window.onscroll = function () {
+            var nav = document.getElementById("nav");
+
+            if (window.scrollY > 50) {
+                nav.classList.add("scrolled");
+            } else {
+                nav.classList.remove("scrolled");
+            }
+        };
+    </script>
+
+</body>
+</html>
